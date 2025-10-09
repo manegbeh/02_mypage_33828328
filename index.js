@@ -25,7 +25,9 @@ const server = http.createServer((req, res) => {
             height: 100vh;
             margin: 0;
             }
-
+            h1, h2 {
+              display: block;
+            }
             p {
             max-width: 600px;
             padding: 20px;
