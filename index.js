@@ -14,7 +14,17 @@ const server = http.createServer((req, res) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me</title>
         <style>
-            p {
+          h1 {
+            max-width: 600px;
+            padding: 20px;
+            background: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+          }  
+            
+          p {
             max-width: 600px;
             padding: 20px;
             background: #ffffff;
