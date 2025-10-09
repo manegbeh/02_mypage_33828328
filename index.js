@@ -15,6 +15,7 @@ const server = http.createServer((req, res) => {
         <title>About Me</title>
         <style> 
           body {
+            text-align: centre
             max-width: 600px;
             padding: 20px;
             background: #ffffff;
