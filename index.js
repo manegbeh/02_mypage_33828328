@@ -1,31 +1,72 @@
-const http = require("http");
+const http = require('http');
 
 const port = 3000;
 
-
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/html" });
-
-  res.end(`
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write(`
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: salmon;
+            }
+
+            .wrapper {
+                width: 750px;
+                background: blanchedalmond;
+                color: #333;
+                border-radius: 10px;
+                padding: 30px 40px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .wrapper h1 { 
+                font-size: 36px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .wrapper p {
+                font-size: 18px;
+                text-align: center;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
     <body>
-      <div class="wrapper">
-        <h1>Hiiiii! Welcome to My Website</h1>
-        <h2>This is a a little bit about me</h2>
-        <p>Hey, I’m someone who’s always up for learning new things and having a laugh along the way. I really enjoy staying active — I go to the gym a lot and I practice Judo, which keeps me on my toes. When I’m chilling out, I’m usually gaming (Fortnite’s my go-to) or getting into sim racing. I’ve also been picking up some French recently, which has been fun. I’d say I’m pretty optimistic, motivated, and I like pushing myself, but at the same time I just enjoy connecting with people and sharing good vibes.</p>
-      </div>
+        <div class="wrapper">
+            <h1>Hiiii! Welcome to My Website</h1>
+            <p>Hey, I’m someone who’s always up for learning new things and having a laugh along the way. 
+            I really enjoy staying active — I go to the gym a lot and I practice Judo, which keeps me on my toes. 
+            When I’m chilling out, I’m usually gaming (Fortnite’s my go-to) or getting into sim racing. 
+            I’ve also been picking up some French recently, which has been fun. 
+            I’d say I’m pretty optimistic, motivated, and I like pushing myself, 
+            but at the same time I just enjoy connecting with people and sharing good vibes.</p>
+        </div>
     </body>
-      
     </html>
-  `);
+    `);
+    res.end();
 });
 
 server.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });
