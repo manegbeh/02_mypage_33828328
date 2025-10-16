@@ -3,7 +3,7 @@ const http = require('http');
 const port = process.env.PORT || 8000;
 
 const server = http.createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "text/html" });
+    res.writeHead(200, { "Content-Type": "text/html; charset=UTF-8" });
     res.write(`
     <!DOCTYPE html>
     <html lang="en">
@@ -54,11 +54,13 @@ const server = http.createServer((req, res) => {
     <body>
         <div class="wrapper">
             <h1>Hiiii! Welcome to My Website</h1>
-            <p>Hey, I am someone who is always up for learning new things and having a laugh along the way. I really enjoy staying active — I go to the gym a lot and I practice Judo, which keeps me on my toes.
-            When I am chilling out, I am usually gaming (Fortnite is my go-to) or getting into sim racing. 
-            I have also been picking up some French recently, which has been fun. 
-            I would say I am pretty optimistic, motivated, and I like pushing myself, 
-            but at the same time I just enjoy connecting with people and sharing good vibes.</p>
+            <p>Hey, I'm someone who's always up for learning new things and having a laugh along the way. 
+            I really enjoy staying active — I go to the gym a lot and I practice Judo, which keeps me on my toes. 
+            When I'm chilling out, I'm usually gaming (Fortnite's my go-to) or getting into sim racing. 
+            I've also been picking up some French recently, which has been fun. 
+            I'd say I'm pretty optimistic, motivated, and I like pushing myself, 
+            but at the same time I just enjoy connecting with people and sharing good vibes.
+            </p
         </div>
     </body>
     </html>
